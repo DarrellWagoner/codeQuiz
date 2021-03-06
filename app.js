@@ -10,12 +10,12 @@ var timeCount = quiz_box.querySelector(".timer .timer_sec");
 var timeOff = quiz_box.querySelector("header .time_text");
 
 
-// const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-// console.log(highScores);
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+console.log(highScores);
 
-// const score ={
-//     score = 
-// }
+const score ={
+    score = 
+}
 // click on start button to go to rules
 start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo");
