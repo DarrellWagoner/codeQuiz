@@ -6,9 +6,28 @@ var continue_btn = document.querySelector(".buttons .restart");
 var quiz_box= document.querySelector(".quiz_box");
 var option_list = document.querySelector(".option_list");
 var timeCount = quiz_box.querySelector(".timer .timer_sec");
+var highScores = [];
 
-var highScores = localStorage.getItem("userScore");
-
+if (localStorage.getItem("userScore")) {
+    highScores = JSON.parse(localStorage.getItem("userScore"));}
+    
+    var form = document.getElementById("myForm");
+    form.addEventListener('submit', function(event){
+        event.preventDefault();
+        console.log('Here', event);
+        if (highScores.length > 0) {
+            highScores.push({
+        
+                
+            
+             initials: document.querySelector('#name').value,
+             score: userScore,
+        });
+            //push to new user score here
+            localStorage.setItem("userScore", JSON.stringify(highScores));
+        }
+    });
+    
 
 var timeOff = quiz_box.querySelector("header .time_text");
 
@@ -31,7 +50,6 @@ continue_btn.onclick = ()=>{
     showQuestions(0);
     queCounter(1);
     startTimer(60);
-    startTimerLine(0);
 }
     let que_count = 0;
     let que_numb = 1;
@@ -59,7 +77,6 @@ continue_btn.onclick = ()=>{
     clearInterval(counter);
     startTimer(timeValue);
     clearInterval(counterLine);
-    startTimerLine(widthValue);
     next_btn.style.display = "none";
     timeOff.textContent = "Time Left";
     }
@@ -77,7 +94,6 @@ continue_btn.onclick = ()=>{
             clearInterval(counter);
             startTimer(timeValue);
             clearInterval(counterLine);
-            startTimerLine(widthValue);
             next_btn.style.display = "none";
             timeOff.textContent = "Time Left";
         }else{
@@ -129,7 +145,7 @@ function optionSelected(answer){
 }
 for (let i = 0; i < allOptions; i++){
     option_list.children[i].classList.add("disabled");
-
+   
 }
 next_btn.style.display = "block";
 }
@@ -196,8 +212,6 @@ function myFunction(){
 }
 
 
-localStorage.setItem("highScores", JSON.parse(localStorage.getItem("userScore")) || [];
-console.log("userScore");
 // game questions and answers
 let questions = [
     {
@@ -318,3 +332,4 @@ let questions = [
     },
     
 ];
+
