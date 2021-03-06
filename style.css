@@ -71,6 +71,7 @@ body{
     padding: 0 30px;
     font-size: 20px;
     font-weight: 600;
+    justify-content: center;
 }
 .info_title span{
     color: rgb(255,0, 165);
@@ -82,6 +83,7 @@ body{
     font-size: 17px;
     color: yellow;
     -webkit-font-smoothing: antialiased;
+    text-align: center;
     
 }
 .info_box .info_list .info span{
@@ -95,6 +97,7 @@ body{
     justify-content: flex-end;
     padding: 0 35px;
     border-top: dotted #222;
+    justify-content: center;
 }
 .info_box .buttons button{
     margin: 0 5px;
@@ -114,6 +117,10 @@ body{
     -webkit-font-smoothing: antialiased;
 
 }
+.buttons button.restart:hover{
+    color: green;
+    border-color:yellow;
+}
 
 .buttons button.quit{
     background-color: #222;
@@ -123,10 +130,11 @@ body{
     cursor: pointer;
 }
 .buttons button.quit:hover{
-    color: red;
-    background-color: #222;
-
+    border-color: yellow;
+    cursor:pointer;
+    color:rgb(255,0, 165)
 }
+
 p{
     color: yellow;
 }
@@ -137,13 +145,19 @@ button{
 }
 button:hover{
     cursor: pointer;
-    background-color: purple;
+    background-color: green;
     border-color: white;
 }
-.buttons button .highScores{
-    background-color: #222;
-    border: 1px dashed yellow;
+.buttons .highScores{
+    background-color: green;
+    
+    color: yellow;
+}
+.buttons .highScores:hover{
+    cursor: pointer;
+    background-color: blue;
     color: white;
+
 }
 .quiz_box{
     

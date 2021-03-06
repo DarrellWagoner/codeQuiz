@@ -7,15 +7,13 @@ var quiz_box= document.querySelector(".quiz_box");
 var option_list = document.querySelector(".option_list");
 var timeCount = quiz_box.querySelector(".timer .timer_sec");
 
+var highScores = localStorage.getItem("userScore");
+
+
 var timeOff = quiz_box.querySelector("header .time_text");
 
 
-const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-console.log(highScores);
 
-const score ={
-    score = 
-}
 // click on start button to go to rules
 start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo");
@@ -184,13 +182,7 @@ function startTimer(time){
         }
     }
 }
-function startTimerLine(time){
-    counterLine = setInterval(timer, 112);
-    function timer(){
-       time += 1;
-       
-        }
-    }
+
 
 // total number of questons counter
 function  queCounter(index){
@@ -202,6 +194,10 @@ button_ques_counter.innerHTML = totalQuesCountTag;
 function myFunction(){
     document.getElementById("myForm").submit();
 }
+
+
+localStorage.setItem("highScores", JSON.parse(localStorage.getItem("userScore")) || [];
+console.log("userScore");
 // game questions and answers
 let questions = [
     {
