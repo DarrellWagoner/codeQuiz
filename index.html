@@ -1,0 +1,84 @@
+
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <title>code quiz</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   
+</head>
+
+<body>
+  <!-- start the game -->
+  <div class="start_btn"><button>Start Quiz</button></div>
+    
+  <div class="info_box">
+    <div class="info_title">
+      <span>the rules</span>
+    </div>
+    <!-- rules to the game -->
+    <div class="info_list">
+      <div class="info">🂱 you have only <span>60 seconds</span> per question.</div>
+      <div class="info">🂢 once you select an answer, you can't unselect.</div>
+      <div class="info">🂣 when timer goes off, you cant select an answer.</div>
+      <div class="info">🂤 while playing the game, you can't exit the quiz. </div>
+      <div class="info">🂥 you get points if you answer correctly.</div>
+    </div>
+  <div class="buttons">
+    <button class="highScores">hi scores</button>
+    <button class="quit">get out!</button>
+    <button class="restart">keep goin'</button>
+    </div>
+  </div>
+ <div class="quiz_box">
+   <header>
+     <!-- name of the game -->
+     <div class="title">[coding Quiz]</div>
+     <!-- timer -->
+     <div class="timer">
+       <div class="time_text">count down</div>
+         <div class="timer_sec">60</div>
+     </div>
+  
+   </header>
+   <section>
+     <div class="que_text">
+     </div>
+     <div class="option_list">
+     </div>
+   </section>
+   <!-- footer with total questions and next button -->
+   <footer>
+     <div class="total_que">
+     </div>
+     <button class="next_btn"> <i class="far fa-hand-point-right">=></i></button>
+   </footer>
+ </div>
+ <div class="result_box">
+   <div class="icon">
+    <i class="fas fa-robot fa-2x"></i>
+   </div>
+   <!-- completed gamne -->
+   <div class="complete_text">done</div>
+   <div class="score_text">
+  </div>
+  <!-- submit initials and play again or quit option -->
+  <p>enter initials & hit submit</p>
+  <form id="myForm">
+    <input type="text" name="fname">
+    <button>submit</button>
+  </form>
+  <div class="buttons">
+    <button class="restart" disabled>>></button>
+    <button class="quit">back to start</button>
+  </div>
+ </div>
+</body>
+<script src="app.js">
+  </script>
+</html>
