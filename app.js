@@ -129,7 +129,7 @@ function optionSelected(answer){
 }
 for (let i = 0; i < allOptions; i++){
     option_list.children[i].classList.add("disabled");
-   
+
 }
 next_btn.style.display = "block";
 }
