@@ -15,8 +15,8 @@ if (localStorage.getItem("userScore")) {
     form.addEventListener('submit', function(event){
         event.preventDefault();
         console.log('Here', event);
-        if (highScores.length > 0) {
-            highScores.push({
+        if (userScore.length > 0) {
+            userScore.push({
         
                 
             
@@ -24,21 +24,15 @@ if (localStorage.getItem("userScore")) {
              score: userScore,
         });
             //push to new user score here
-            localStorage.setItem("userScore", JSON.stringify(highScores));
+            localStorage.setItem("userScore", JSON.stringify(userScore));
         }
     });
    
-function showScores(){
-    const scoreBtn =
-    document.getElementById('highScores');
-    if (form.classList.contains('hide')){
-        form.classList.remove('hide')
-    }else{
-        form.classList.add('hide');
-    }
-    document.getElementById('highScores').addEventListener('click', function(event){
-        event.preventDefault();
-        showScores();
+
+
+document.getElementById('highScores').addEventListener('click', function(event){
+    event.preventDefault();
+    showScores();
 });
 var timeOff = quiz_box.querySelector("header .time_text");
 
@@ -222,7 +216,19 @@ button_ques_counter.innerHTML = totalQuesCountTag;
 function myFunction(){
     document.getElementById("myForm").submit();
 }
-
+function showScores(){
+    const scoreBtn =
+    document.getElementById('scores-container');
+    console.log(userScore);
+    for(var i = 0; i < userScore.length; i++){
+        const div =
+        document.createElement('div');
+        div.textContent =
+        `${Scores[i].initials} -
+        ${highScores[i].score}`;
+        scoreBtn.appendChild(div);  
+        }
+    }
 
 // game questions and answers
 let questions = [
