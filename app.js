@@ -27,7 +27,16 @@ if (localStorage.getItem("userScore")) {
             localStorage.setItem("userScore", JSON.stringify(highScores));
         }
     });
-    
+   
+function myFunction(){
+    var x = document.getElementById("myForm");
+    x.classList.add('hide');
+}
+
+function myFunction(){
+    var x = document.getElementById("myForm");
+    x.classList.remove('hide');
+}
 
 var timeOff = quiz_box.querySelector("header .time_text");
 
@@ -117,6 +126,7 @@ function showQuestions(index){
         option[i].setAttribute("onclick", "optionSelected(this)");
     }
 }
+// x or check mark for correct or incorrect answer
 let tickIcon = '<div class="icon tick"><i class="fas fa-check"></i></div>';
 let crossIcon = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 

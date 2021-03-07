@@ -16,6 +16,7 @@ body{
     background-color: green;
     border: 5px dashed rgb(35,165, 165);
 }
+/* buttons */
 .start_btn,
 .info_box,
 .quiz_box,
@@ -27,6 +28,7 @@ body{
     transform: translate(-50%, -50%);
     transition: all 1.0s ease-in-out;
 }
+/* .info_box */
 .info_box.activeInfo,
 .quiz_box.activeQuiz,
 .result_box.activeResult{
@@ -35,6 +37,7 @@ body{
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
 }
+/* start button */
 .start_btn button{
     font-size: 25px;
     background-color: #222;
@@ -54,6 +57,7 @@ body{
     -webkit-font-smoothing: antialiased;
     cursor: pointer;
 }
+/* info .info_box */
 .info_box{
     width: 540px;
     background: #222;
@@ -110,6 +114,7 @@ body{
     font-weight: 500;
     transition: all 0.3s ease;
 }
+/* restart button */
 .buttons button.restart{
     color: #fff;
     border: 1px dotted rgb(255,0,255);
@@ -121,7 +126,7 @@ body{
     color: green;
     border-color:yellow;
 }
-
+/* quit button */
 .buttons button.quit{
     background-color: #222;
     color: #fff;
@@ -134,9 +139,12 @@ body{
     cursor:pointer;
     color:rgb(255,0, 165)
 }
-
+/* paragraph */
 p{
     color: yellow;
+}
+.hide{
+    display: none;
 }
 button{
     background-color: #222;
@@ -148,6 +156,7 @@ button:hover{
     background-color: green;
     border-color: white;
 }
+/* high score button */
 .buttons .highScores{
     background-color: green;
     
@@ -186,6 +195,7 @@ button:hover{
     font-size: 20px;
     font-weight: 600;
 }
+/* countdown */
 .quiz_box header .timer{
     display: flex;
     align-items: center;
@@ -224,6 +234,7 @@ button:hover{
     font-weight: 600;
     color: rgb(255,0, 165);
 }
+/* possible answers to questions */
 .quiz_box section .option_list{
     padding: 20px 0;
     display: block;
@@ -248,6 +259,7 @@ section .option_list .option:hover{
     background: rgb(35, 165, 165);
     border-color: red;
 }
+
 .option_list .option:last-child{
     margin-bottom: 0px;
 }
@@ -275,7 +287,7 @@ section .option_list .option:hover{
 }
 .option_list .option.incorrect{
     color: red;
-    background: #222;
+    background-color: #222;
     border-color: red;
 }
 .option_list .option.disabled{
@@ -296,10 +308,12 @@ section .option_list .option:hover{
     color:rgb(255,0, 165);
 
 }
+/* footer with total questions */
 .quiz_box footer .total_que span{
     display: flex;
     user-select: none;
 }
+
 footer .total_que{
     font-weight: 500;
     padding: 0 5px;
@@ -308,6 +322,7 @@ footer .total_que span p:first{
     padding-left: 0px;
 
 }
+/* footer with next button */
 footer .next_btn{
     
     height: 40px;
@@ -317,8 +332,7 @@ footer .next_btn{
     border: none;
     outline: none;
     background-color: #222;
-    border: 2px dashed yellow;
-    color: #fff;
+    color: yellow;
     -webkit-font-smoothing: antialiased;
     cursor: pointer;
     transition: 0.5s;
@@ -327,7 +341,7 @@ footer .next_btn:hover{
     background:rgb(255,0, 165);
     color: #fff;
 }
-
+/* score .results */
 .result_box{
     background: #222;
     border: 3px groove rgb(255,0, 165);
@@ -368,6 +382,7 @@ footer .next_btn:hover{
     padding: 0 4px;
 
 }
+
 .result_box .buttons{
     display: flex;
     margin: 20px 0;
@@ -386,6 +401,7 @@ footer .next_btn:hover{
     cursor: pointer;
     transition: all 0.5s ease;
 }
+/* media query */ 
 @media screen and (max-width: 992px) {
     .quiz_box{
         height: 60px;
