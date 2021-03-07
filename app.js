@@ -28,16 +28,18 @@ if (localStorage.getItem("userScore")) {
         }
     });
    
-function myFunction(){
-    var x = document.getElementById("myForm");
-    x.classList.add('hide');
-}
-
-function myFunction(){
-    var x = document.getElementById("myForm");
-    x.classList.remove('hide');
-}
-
+function showScores(){
+    const scoreBtn =
+    document.getElementById('highScores');
+    if (form.classList.contains('hide')){
+        form.classList.remove('hide')
+    }else{
+        form.classList.add('hide');
+    }
+    document.getElementById('highScores').addEventListener('click', function(event){
+        event.preventDefault();
+        showScores();
+});
 var timeOff = quiz_box.querySelector("header .time_text");
 
 
